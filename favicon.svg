@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <clipPath id="c"><rect width="32" height="32" rx="7"/></clipPath>
+  </defs>
+  <rect width="32" height="32" rx="7" fill="#E53935"/>
+  <rect y="16" width="32" height="16" clip-path="url(#c)" fill="#43A047"/>
+  <text x="16" y="23" font-size="13" text-anchor="middle" dominant-baseline="middle" font-family="Apple Color Emoji,Segoe UI Emoji,sans-serif">🚗</text>
+</svg>
