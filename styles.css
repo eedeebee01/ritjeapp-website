@@ -447,3 +447,18 @@ input:focus, select:focus { outline: none; border-color: var(--green); }
 }
 .contact-email-btn:hover { opacity: 0.88; text-decoration: none; color: var(--white); }
 .contact-response { font-size: 0.82rem; color: var(--text-light); }
+
+.contact-success-state {
+  display: none;
+  text-align: center;
+  padding: 2rem 0 1rem;
+  animation: fadeUp 0.4s ease;
+}
+.contact-success-state .success-icon { font-size: 3rem; display: block; margin-bottom: 1rem; }
+.contact-success-state h2 { margin-bottom: 0.5rem; }
+.contact-success-state p { color: var(--text-light); font-size: 0.95rem; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
