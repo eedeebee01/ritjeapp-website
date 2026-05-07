@@ -1,138 +1,69 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FAQ — "Zijn we er al?" | ritjeapp.nl</title>
   <meta name="description" content="Veelgestelde vragen over de reisapp voor peuters." />
   <link rel="canonical" href="https://www.ritjeapp.nl/faq.html" />
   <link rel="stylesheet" href="styles.css" />
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-    {"@type":"Question","name":"Wat doet \"Zijn we er al?\"?","acceptedAnswer":{"@type":"Answer","text":"Een reisapp voor peuters en jonge kinderen. Het scherm is rood en vult zich van onderaf groen naarmate de bestemming dichterbij komt. Een voertuigemoji zweeft op de grens. Geen woorden, geen getallen — zelfs een kind van 2 begrijpt het meteen."}},
-    {"@type":"Question","name":"Voor welke leeftijd is de app geschikt?","acceptedAnswer":{"@type":"Answer","text":"Ontworpen voor peuters en kleuters van ongeveer 1 tot 6 jaar. Geen tekst of getallen nodig, dus ook geschikt voor kinderen die nog niet kunnen lezen. Oudere kinderen vinden de tijdsinschatting ook handig."}},
-    {"@type":"Question","name":"Werkt de app zonder internet?","acceptedAnswer":{"@type":"Answer","text":"Ja. Tijdens de rit werkt de app volledig zonder internet — alleen GPS nodig. Alleen bij het instellen van een bestemming op naam is even internet nodig. Daarna volledig offline."}},
-    {"@type":"Question","name":"Hoeveel kost \"Zijn we er al?\"?","acceptedAnswer":{"@type":"Answer","text":"Eenmalig €1,99. Geen advertenties, geen abonnement, geen in-app aankopen. Eén keer betalen, voor altijd."}}
-  ]}
-  </script>
 </head>
 <body>
-
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <span class="logo-main">ritjeapp<span>.nl</span></span>
-      <span class="logo-sub">Zijn we er al?</span>
-    </a>
-    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <a href="index.html" class="nav-logo"><span class="logo-main">ritjeapp<span>.nl</span></span><span class="logo-sub">Zijn we er al?</span></a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="privacy.html">Privacy</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="beta.html" class="nav-cta">🧪 Beta testen</a></li>
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+      <li><a href="privacy.html" data-i18n="nav.privacy">Privacy</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><a href="beta.html" class="nav-cta" data-i18n="nav.beta">🧪 Beta testen</a></li>
     </ul>
+    <div id="lang-picker">
+      <button id="lp-toggle" aria-label="Language"><span id="lp-flag">🇳🇱</span> <span id="lp-code">NL</span> <span class="lp-arrow">▾</span></button>
+      <div id="lp-dropdown">
+        <button class="lp-btn active" data-lang="nl">🇳🇱 NL</button>
+        <button class="lp-btn" data-lang="en">🇬🇧 EN</button>
+        <button class="lp-btn" data-lang="de">🇩🇪 DE</button>
+        <button class="lp-btn" data-lang="fr">🇫🇷 FR</button>
+        <button class="lp-btn" data-lang="es">🇪🇸 ES</button>
+        <button class="lp-btn" data-lang="it">🇮🇹 IT</button>
+      </div>
+    </div>
   </div>
 </nav>
 
 <div class="container">
   <div class="page-hero">
-    <p class="section-label">Veelgestelde vragen</p>
-    <h1>FAQ</h1>
-    <p>Alles over "Zijn we er al?" — de reisapp voor peuters.</p>
+    <p class="section-label" data-i18n="faq.label">Veelgestelde vragen</p>
+    <h1 data-i18n="faq.title">FAQ</h1>
+    <p data-i18n="faq.subtitle">Alles over "Zijn we er al?" — de reisapp voor peuters.</p>
   </div>
-
   <div class="faq-body">
+    <p class="faq-category-title" data-i18n="faq.cat1">Over de app</p>
+    <details><summary data-i18n="faq.q1">Wat doet "Zijn we er al?"?</summary><div class="faq-answer" data-i18n="faq.a1">Een reisapp voor peuters en jonge kinderen. Het scherm is rood en vult zich van onderaf groen naarmate de bestemming dichterbij komt. Een voertuigemoji zweeft op de grens. Geen woorden, geen getallen — zelfs een kind van 2 begrijpt het meteen.</div></details>
+    <details><summary data-i18n="faq.q2">Voor welke leeftijd is de app geschikt?</summary><div class="faq-answer" data-i18n="faq.a2">Ontworpen voor peuters en kleuters van ongeveer 1 tot 6 jaar. Geen tekst of getallen nodig, dus ook geschikt voor kinderen die nog niet kunnen lezen. Oudere kinderen vinden de tijdsinschatting ook handig.</div></details>
+    <details><summary data-i18n="faq.q3">Werkt de app zonder internet?</summary><div class="faq-answer" data-i18n="faq.a3">Ja. Tijdens de rit werkt de app volledig zonder internet — alleen GPS nodig. Alleen bij het instellen van een bestemming op naam is even internet nodig. Daarna volledig offline.</div></details>
+    <details><summary data-i18n="faq.q4">Werkt "Zijn we er al?" ook in het vliegtuig of de trein?</summary><div class="faq-answer" data-i18n="faq.a4">Ja. Bij het instellen kies je het vervoersmiddel: auto 🚗, trein 🚂, vliegtuig ✈️ of boot ⛵. Het bijpassende icoontje zweeft op de grens.</div></details>
+    <details><summary data-i18n="faq.q5">Kunnen we de bestemming geheimhouden als verrassing?</summary><div class="faq-answer" data-i18n="faq.a5">Ja. In de instellingen zet je de verrassing modus aan. Kind ziet dan alleen rood naar groen — geen naam van de bestemming. Standaard staat dit aan.</div></details>
 
-    <p class="faq-category-title">Over de app</p>
+    <p class="faq-category-title" data-i18n-html="faq.cat2">Instellen &amp; gebruiken</p>
+    <details><summary data-i18n="faq.q6">Hoe stel ik een rit in?</summary><div class="faq-answer" data-i18n="faq.a6">De ouder stelt de rit eenmalig in via een pincode-beveiligd instellingenscherm. Kies een vertrekpunt (of gebruik huidige locatie) en voer een bestemming in — of het aantal kilometers. Na het starten onthoudt de app de rit, ook als het kind de app sluit en later weer opent.</div></details>
+    <details><summary data-i18n="faq.q7">Wat als mijn kind per ongeluk op de instellingen drukt?</summary><div class="faq-answer" data-i18n="faq.a7">De instellingen zijn beveiligd met een 4-cijferige pincode. Na 3 foute pogingen of 10 seconden zonder invoer gaat het scherm automatisch terug naar het voortgangsscherm. Het kind ziet nooit een foutmelding.</div></details>
+    <details><summary data-i18n="faq.q8">Kan ik ook gewoon een aantal kilometers instellen?</summary><div class="faq-answer" data-i18n="faq.a8">Ja. Voer het aantal kilometers in en de app telt via GPS de afgelegde kilometers op. Werkt volledig offline.</div></details>
+    <details><summary data-i18n="faq.q9">Hoe werkt de tijdsinschatting?</summary><div class="faq-answer" data-i18n="faq.a9">Verschijnt na minimaal 10 minuten rijden én minimaal 5 kilometer. Berekend op basis van gemiddelde reissnelheid tot dan toe. Weergave: "Nog 32 minuten" of "Nog 1 uur en 45 minuten".</div></details>
+    <details><summary data-i18n="faq.q10">Wat als we door een tunnel rijden en GPS wegvalt?</summary><div class="faq-answer" data-i18n="faq.a10">Het scherm bevriest op de laatste bekende positie. Gaat niet terug, doet niet raar. Zodra signaal terugkomt gaat de app gewoon verder.</div></details>
 
-    <details>
-      <summary>Wat doet "Zijn we er al?"?</summary>
-      <div class="faq-answer">Een reisapp voor peuters en jonge kinderen. Het scherm is rood en vult zich van onderaf groen naarmate de bestemming dichterbij komt. Een voertuigemoji zweeft op de grens. Geen woorden, geen getallen — zelfs een kind van 2 begrijpt het meteen.</div>
-    </details>
+    <p class="faq-category-title" data-i18n-html="faq.cat3">Technisch &amp; apparaten</p>
+    <details><summary data-i18n="faq.q11">Op welke apparaten werkt "Zijn we er al?"?</summary><div class="faq-answer" data-i18n="faq.a11">iPhone, iPad en alle Android telefoons en tablets. Past zich automatisch aan het schermformaat aan. Werkt in portrait én landscape modus.</div></details>
+    <details><summary data-i18n="faq.q12">In welke talen is de app beschikbaar?</summary><div class="faq-answer" data-i18n="faq.a12">Zes talen: Nederlands, Engels, Duits, Frans, Spaans en Italiaans. App detecteert automatisch de taal van het apparaat.</div></details>
 
-    <details>
-      <summary>Voor welke leeftijd is de app geschikt?</summary>
-      <div class="faq-answer">Ontworpen voor peuters en kleuters van ongeveer 1 tot 6 jaar. Geen tekst of getallen nodig, dus ook geschikt voor kinderen die nog niet kunnen lezen. Oudere kinderen vinden de tijdsinschatting ook handig.</div>
-    </details>
+    <p class="faq-category-title" data-i18n-html="faq.cat4">Prijs &amp; aankoop</p>
+    <details><summary data-i18n="faq.q13">Hoeveel kost "Zijn we er al?"?</summary><div class="faq-answer" data-i18n="faq.a13">Eenmalig €1,99. Geen advertenties, geen abonnement, geen in-app aankopen. Eén keer betalen, voor altijd.</div></details>
+    <details><summary data-i18n="faq.q14">Moet ik opnieuw betalen als ik de app verwijder?</summary><div class="faq-answer" data-i18n="faq.a14">Nee. Aankoop is gekoppeld aan je App Store of Google Play account. Gratis opnieuw downloaden via "Eerder gekochte items".</div></details>
+    <details><summary data-i18n="faq.q15">Wat als ik mijn pincode vergeet?</summary><div class="faq-answer" data-i18n="faq.a15">Verwijder de app en installeer opnieuw. De aankoop blijft bewaard — je betaalt nooit opnieuw.</div></details>
 
-    <details>
-      <summary>Werkt de app zonder internet?</summary>
-      <div class="faq-answer">Ja. Tijdens de rit werkt de app volledig zonder internet — alleen GPS nodig. Alleen bij het instellen van een bestemming op naam is even internet nodig. Daarna volledig offline.</div>
-    </details>
-
-    <details>
-      <summary>Werkt "Zijn we er al?" ook in het vliegtuig of de trein?</summary>
-      <div class="faq-answer">Ja. Bij het instellen kies je het vervoersmiddel: auto 🚗, trein 🚂, vliegtuig ✈️ of boot ⛵. Het bijpassende icoontje zweeft op de grens. GPS-logica werkt hetzelfde voor alle vervoersmiddelen.</div>
-    </details>
-
-    <details>
-      <summary>Kunnen we de bestemming geheimhouden als verrassing?</summary>
-      <div class="faq-answer">Ja. In de instellingen zet je de verrassing modus aan. Kind ziet dan alleen rood naar groen — geen naam van de bestemming. Standaard staat dit aan.</div>
-    </details>
-
-    <p class="faq-category-title">Instellen &amp; gebruiken</p>
-
-    <details>
-      <summary>Hoe stel ik een rit in?</summary>
-      <div class="faq-answer">De ouder stelt de rit eenmalig in via een pincode-beveiligd instellingenscherm. Kies een vertrekpunt (of gebruik huidige locatie) en voer een bestemming in — of het aantal kilometers. Na het starten onthoudt de app de rit, ook als het kind de app sluit en later weer opent.</div>
-    </details>
-
-    <details>
-      <summary>Wat als mijn kind per ongeluk op de instellingen drukt?</summary>
-      <div class="faq-answer">De instellingen zijn beveiligd met een 4-cijferige pincode. Na 3 foute pogingen of 10 seconden zonder invoer gaat het scherm automatisch terug naar het voortgangsscherm. Het kind ziet nooit een foutmelding.</div>
-    </details>
-
-    <details>
-      <summary>Kan ik ook gewoon een aantal kilometers instellen?</summary>
-      <div class="faq-answer">Ja. Voer het aantal kilometers in en de app telt via GPS de afgelegde kilometers op. Werkt volledig offline.</div>
-    </details>
-
-    <details>
-      <summary>Hoe werkt de tijdsinschatting?</summary>
-      <div class="faq-answer">Verschijnt na minimaal 10 minuten rijden én minimaal 5 kilometer. Berekend op basis van gemiddelde reissnelheid tot dan toe. Weergave: "Nog 32 minuten" of "Nog 1 uur en 45 minuten".</div>
-    </details>
-
-    <details>
-      <summary>Wat als we door een tunnel rijden en GPS wegvalt?</summary>
-      <div class="faq-answer">Het scherm bevriest op de laatste bekende positie. Gaat niet terug, doet niet raar. Zodra signaal terugkomt gaat de app gewoon verder.</div>
-    </details>
-
-    <p class="faq-category-title">Technisch &amp; apparaten</p>
-
-    <details>
-      <summary>Op welke apparaten werkt "Zijn we er al?"?</summary>
-      <div class="faq-answer">iPhone, iPad en alle Android telefoons en tablets. Past zich automatisch aan het schermformaat aan. Werkt in portrait én landscape modus.</div>
-    </details>
-
-    <details>
-      <summary>In welke talen is de app beschikbaar?</summary>
-      <div class="faq-answer">Zes talen: Nederlands, Engels, Duits, Frans, Spaans en Italiaans. App detecteert automatisch de taal van het apparaat.</div>
-    </details>
-
-    <p class="faq-category-title">Prijs &amp; aankoop</p>
-
-    <details>
-      <summary>Hoeveel kost "Zijn we er al?"?</summary>
-      <div class="faq-answer">Eenmalig €1,99. Geen advertenties, geen abonnement, geen in-app aankopen. Eén keer betalen, voor altijd.</div>
-    </details>
-
-    <details>
-      <summary>Moet ik opnieuw betalen als ik de app verwijder?</summary>
-      <div class="faq-answer">Nee. Aankoop is gekoppeld aan je App Store of Google Play account. Gratis opnieuw downloaden via "Eerder gekochte items".</div>
-    </details>
-
-    <details>
-      <summary>Wat als ik mijn pincode vergeet?</summary>
-      <div class="faq-answer">Verwijder de app en installeer opnieuw. De aankoop blijft bewaard — je betaalt nooit opnieuw.</div>
-    </details>
-
-    <div class="faq-contact">
-      Nog een vraag? Mail naar <a href="mailto:info@ritjeapp.nl">info@ritjeapp.nl</a> — we reageren binnen 24 uur.
-    </div>
-
+    <div class="faq-contact" data-i18n-html="faq.contact">Nog een vraag? Mail naar <a href="mailto:info@ritjeapp.nl">info@ritjeapp.nl</a> — we reageren binnen 24 uur.</div>
   </div>
 </div>
 
@@ -140,19 +71,15 @@
   <div class="footer-inner">
     <div class="footer-logo">ritjeapp.nl</div>
     <ul class="footer-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="beta.html">Beta testen</a></li>
-      <li><a href="privacy.html">Privacy</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+      <li><a href="beta.html" data-i18n="nav.beta">🧪 Beta testen</a></li>
+      <li><a href="privacy.html" data-i18n="nav.privacy">Privacy</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
     </ul>
-    <div class="footer-copy">
-      <span>© 2025 ritjeapp.nl · "Zijn we er al?" · Gemaakt met ❤️ voor ouders</span>
-      <span>© OpenStreetMap contributors</span>
-    </div>
+    <div class="footer-copy"><span data-i18n="footer.copy">© 2025 ritjeapp.nl · "Zijn we er al?" · Gemaakt met ❤️ voor ouders</span><span>© OpenStreetMap contributors</span></div>
   </div>
 </footer>
-
-<script src="script.js"></script>
+<script src="translations.js"></script><script src="script.js"></script>
 </body>
 </html>

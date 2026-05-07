@@ -398,6 +398,34 @@ input:focus, select:focus { outline: none; border-color: var(--green); }
 
 .privacy-updated { font-size: 0.8rem; color: #aaa; margin-top: 2.5rem; }
 
+/* ── LANG PICKER ── */
+#lang-picker { position: relative; }
+#lp-toggle {
+  display: flex; align-items: center; gap: 0.3rem;
+  padding: 0.35rem 0.6rem; border: 1.5px solid var(--border);
+  border-radius: 20px; background: var(--white); cursor: pointer;
+  font-size: 0.85rem; font-family: inherit; font-weight: 600;
+  transition: border-color 0.15s;
+}
+#lp-toggle:hover { border-color: var(--text); }
+.lp-arrow { font-size: 0.65rem; opacity: 0.5; }
+#lp-dropdown {
+  display: none; position: absolute; top: calc(100% + 8px); right: 0;
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); box-shadow: var(--shadow-lg);
+  padding: 0.4rem; z-index: 200; min-width: 90px;
+}
+#lp-dropdown.open { display: block; }
+.lp-btn {
+  display: flex; align-items: center; gap: 0.4rem;
+  width: 100%; padding: 0.45rem 0.7rem; border: none;
+  background: none; cursor: pointer; font-size: 0.85rem;
+  font-family: inherit; border-radius: 6px; white-space: nowrap;
+  transition: background 0.12s;
+}
+.lp-btn:hover { background: var(--bg); }
+.lp-btn.active { font-weight: 700; }
+
 /* ── CONTACT ── */
 .contact-wrap {
   min-height: calc(100vh - var(--nav-height) - 180px);

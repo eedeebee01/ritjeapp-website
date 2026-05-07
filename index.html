@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="styles.css" />
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[
-    {"@type":"MobileApplication","name":"Zijn we er al?","description":"De reisapp voor peuters. Het scherm kleurt van rood naar groen naarmate de bestemming dichterbij komt.","offers":{"@type":"Offer","price":"1.99","priceCurrency":"EUR"},"availableLanguage":["nl","en","de","fr","es","it"],"operatingSystem":"iOS, Android","applicationCategory":"TravelApplication"},
+    {"@type":"MobileApplication","name":"Zijn we er al?","description":"De reisapp voor peuters.","offers":{"@type":"Offer","price":"1.99","priceCurrency":"EUR"},"availableLanguage":["nl","en","de","fr","es","it"],"operatingSystem":"iOS, Android","applicationCategory":"TravelApplication"},
     {"@type":"WebSite","name":"ritjeapp.nl","url":"https://www.ritjeapp.nl"}
   ]}
   </script>
@@ -26,31 +26,39 @@
       <span class="logo-main">ritjeapp<span>.nl</span></span>
       <span class="logo-sub">Zijn we er al?</span>
     </a>
-    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="privacy.html">Privacy</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="beta.html" class="nav-cta">🧪 Beta testen</a></li>
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+      <li><a href="privacy.html" data-i18n="nav.privacy">Privacy</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><a href="beta.html" class="nav-cta" data-i18n="nav.beta">🧪 Beta testen</a></li>
     </ul>
+    <div id="lang-picker">
+      <button id="lp-toggle" aria-label="Language"><span id="lp-flag">🇳🇱</span> <span id="lp-code">NL</span> <span class="lp-arrow">▾</span></button>
+      <div id="lp-dropdown">
+        <button class="lp-btn active" data-lang="nl">🇳🇱 NL</button>
+        <button class="lp-btn" data-lang="en">🇬🇧 EN</button>
+        <button class="lp-btn" data-lang="de">🇩🇪 DE</button>
+        <button class="lp-btn" data-lang="fr">🇫🇷 FR</button>
+        <button class="lp-btn" data-lang="es">🇪🇸 ES</button>
+        <button class="lp-btn" data-lang="it">🇮🇹 IT</button>
+      </div>
+    </div>
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="container">
     <div class="hero-inner">
       <div class="hero-content">
-        <h1>"Zijn we er al?"</h1>
-        <p class="hero-subline">De app die peuters kalm houdt op reis. Geen woorden, geen getallen — gewoon een scherm dat van rood naar groen kleurt.</p>
+        <h1 data-i18n="hero.title">"Zijn we er al?"</h1>
+        <p class="hero-subline" data-i18n="hero.subline">De app die peuters kalm houdt op reis. Geen woorden, geen getallen — gewoon een scherm dat van rood naar groen kleurt.</p>
         <div class="hero-buttons">
-          <a href="#download" class="btn-primary">Download nu</a>
-          <a href="beta.html" class="btn-secondary">Gratis beta testen</a>
+          <a href="#download" class="btn-primary" data-i18n="hero.btn.download">Download nu</a>
+          <a href="beta.html" class="btn-secondary" data-i18n="hero.btn.beta">Gratis beta testen</a>
         </div>
-        <p class="hero-meta">Eenmalig €1,99 · Geen advertenties · Geen abonnement</p>
+        <p class="hero-meta" data-i18n="hero.meta">Eenmalig €1,99 · Geen advertenties · Geen abonnement</p>
       </div>
       <div class="phone-wrap">
         <div class="phone">
@@ -64,83 +72,38 @@
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
 <section class="how-section">
   <div class="container">
-    <p class="section-label">Hoe het werkt</p>
-    <h2 class="section-title">In 3 stappen onderweg</h2>
+    <p class="section-label" data-i18n="how.label">Hoe het werkt</p>
+    <h2 class="section-title" data-i18n="how.title">In 3 stappen onderweg</h2>
     <div class="steps">
-      <div class="step">
-        <div class="step-number">1</div>
-        <div>
-          <h3>Ouder stelt de rit in</h3>
-          <p>Voer de bestemming in of kies het aantal kilometers. Eenmalig, duurt 30 seconden. Beveiligd met pincode.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-number">2</div>
-        <div>
-          <h3>Kind kijkt zijn filmpje</h3>
-          <p>Geef de tablet aan je kind. De app onthoudt de rit — ook als de app gesloten wordt.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-number">3</div>
-        <div>
-          <h3>Kind opent app, ziet voortgang</h3>
-          <p>Rood vult zich van onderaf groen. Het voertuig rijdt mee op de grens. Klaar.</p>
-        </div>
-      </div>
+      <div class="step"><div class="step-number">1</div><div><h3 data-i18n="how.step1.title">Ouder stelt de rit in</h3><p data-i18n="how.step1.text">Voer de bestemming in of kies het aantal kilometers. Eenmalig, duurt 30 seconden. Beveiligd met pincode.</p></div></div>
+      <div class="step"><div class="step-number">2</div><div><h3 data-i18n="how.step2.title">Kind kijkt zijn filmpje</h3><p data-i18n="how.step2.text">Geef de tablet aan je kind. De app onthoudt de rit — ook als de app gesloten wordt.</p></div></div>
+      <div class="step"><div class="step-number">3</div><div><h3 data-i18n="how.step3.title">Kind opent app, ziet voortgang</h3><p data-i18n="how.step3.text">Rood vult zich van onderaf groen. Het voertuig rijdt mee op de grens. Klaar.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- FEATURES -->
 <section class="features-section">
   <div class="container">
-    <p class="section-label">Features</p>
-    <h2 class="section-title">Gemaakt voor echte ritten</h2>
+    <p class="section-label" data-i18n="features.label">Features</p>
+    <h2 class="section-title" data-i18n="features.title">Gemaakt voor echte ritten</h2>
     <div class="features-grid">
-      <div class="feature-card">
-        <span class="feature-icon">🔐</span>
-        <h3>Pincode voor ouders</h3>
-        <p>Instellingen afgeschermd met een 4-cijferige pincode. Geen ongewenste wijzigingen door kleine vingers.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">📡</span>
-        <h3>Werkt zonder internet</h3>
-        <p>Alleen GPS nodig tijdens de rit. Geen dataverbruik. Werkt altijd en overal.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">🚗</span>
-        <h3>Kies je vervoer</h3>
-        <p>Auto, trein, vliegtuig of boot. Het juiste icoontje rijdt mee op de grens van rood en groen.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">⏱️</span>
-        <h3>Tijdsinschatting</h3>
-        <p>Na een paar minuten rijden toont de app automatisch hoe lang het nog duurt. "Nog 32 minuten!"</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">🎁</span>
-        <h3>Verrassing modus</h3>
-        <p>Houd de bestemming geheim. Kind ziet alleen rood naar groen — geen naam van de bestemming.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">🎮</span>
-        <h3>Demo modus</h3>
-        <p>Laat je kind voor vertrek zien hoe de app werkt.</p>
-      </div>
+      <div class="feature-card"><span class="feature-icon">🔐</span><h3 data-i18n="f1.title">Pincode voor ouders</h3><p data-i18n="f1.text">Instellingen afgeschermd met een 4-cijferige pincode. Geen ongewenste wijzigingen door kleine vingers.</p></div>
+      <div class="feature-card"><span class="feature-icon">📡</span><h3 data-i18n="f2.title">Werkt zonder internet</h3><p data-i18n="f2.text">Alleen GPS nodig tijdens de rit. Geen dataverbruik. Werkt altijd en overal.</p></div>
+      <div class="feature-card"><span class="feature-icon">🚗</span><h3 data-i18n="f3.title">Kies je vervoer</h3><p data-i18n="f3.text">Auto, trein, vliegtuig of boot. Het juiste icoontje rijdt mee op de grens van rood en groen.</p></div>
+      <div class="feature-card"><span class="feature-icon">⏱️</span><h3 data-i18n="f4.title">Tijdsinschatting</h3><p data-i18n="f4.text">Na een paar minuten rijden toont de app automatisch hoe lang het nog duurt. "Nog 32 minuten!"</p></div>
+      <div class="feature-card"><span class="feature-icon">🎁</span><h3 data-i18n="f5.title">Verrassing modus</h3><p data-i18n="f5.text">Houd de bestemming geheim. Kind ziet alleen rood naar groen — geen naam van de bestemming.</p></div>
+      <div class="feature-card"><span class="feature-icon">🎮</span><h3 data-i18n="f6.title">Demo modus</h3><p data-i18n="f6.text">Laat je kind voor vertrek zien hoe de app werkt.</p></div>
     </div>
   </div>
 </section>
 
-<!-- LANGUAGES -->
 <section class="languages-section">
   <div class="container">
-    <p class="section-label">Talen</p>
-    <h2 class="section-title">Beschikbaar in 6 talen</h2>
-    <p class="lang-subtitle">App detecteert automatisch de apparaattaal</p>
+    <p class="section-label" data-i18n="lang.label">Talen</p>
+    <h2 class="section-title" data-i18n="lang.title">Beschikbaar in 6 talen</h2>
+    <p class="lang-subtitle" data-i18n="lang.subtitle">App detecteert automatisch de apparaattaal</p>
     <div class="lang-grid">
       <div class="lang-pill"><span class="flag">🇳🇱</span><span class="lang-code">NL</span><span class="lang-phrase">Zijn we er al?</span></div>
       <div class="lang-pill"><span class="flag">🇬🇧</span><span class="lang-code">EN</span><span class="lang-phrase">Are we there yet?</span></div>
@@ -152,29 +115,22 @@
   </div>
 </section>
 
-<!-- DOWNLOAD -->
 <div class="download-outer" id="download">
   <div class="download-section">
-    <h2>Klaar voor de volgende rit?</h2>
-    <p class="download-subtitle">Eenmalig €1,99 · Geen advertenties · Nooit meer betalen</p>
+    <h2 data-i18n="dl.title">Klaar voor de volgende rit?</h2>
+    <p class="download-subtitle" data-i18n="dl.subtitle">Eenmalig €1,99 · Geen advertenties · Nooit meer betalen</p>
     <div class="store-buttons">
       <a href="#" class="store-btn">
         <span class="store-icon">🍎</span>
-        <span class="store-text">
-          <span class="store-label">Binnenkort op de</span>
-          <span class="store-name">App Store</span>
-        </span>
+        <span class="store-text"><span class="store-label" data-i18n="dl.apple.label">Binnenkort op de</span><span class="store-name" data-i18n="dl.apple.name">App Store</span></span>
       </a>
       <a href="https://play.google.com/store/apps/details?id=com.zijnweereal.app" class="store-btn" target="_blank" rel="noopener">
         <span class="store-icon">▶️</span>
-        <span class="store-text">
-          <span class="store-label">Beschikbaar op</span>
-          <span class="store-name">Google Play</span>
-        </span>
+        <span class="store-text"><span class="store-label" data-i18n="dl.play.label">Beschikbaar op</span><span class="store-name" data-i18n="dl.play.name">Google Play</span></span>
       </a>
     </div>
-    <p class="download-beta">Of <a href="beta.html">meld je aan voor de gratis beta</a></p>
-    <p class="download-small">© OpenStreetMap contributors · Werkt op iPhone, iPad en Android</p>
+    <p class="download-beta"><a href="beta.html" data-i18n="dl.beta">Of meld je aan voor de gratis beta</a></p>
+    <p class="download-small" data-i18n="dl.small">© OpenStreetMap contributors · Werkt op iPhone, iPad en Android</p>
   </div>
 </div>
 
@@ -182,19 +138,20 @@
   <div class="footer-inner">
     <div class="footer-logo">ritjeapp.nl</div>
     <ul class="footer-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="beta.html">Beta testen</a></li>
-      <li><a href="privacy.html">Privacy</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+      <li><a href="beta.html" data-i18n="nav.beta">🧪 Beta testen</a></li>
+      <li><a href="privacy.html" data-i18n="nav.privacy">Privacy</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
     </ul>
     <div class="footer-copy">
-      <span>© 2025 ritjeapp.nl · "Zijn we er al?" · Gemaakt met ❤️ voor ouders</span>
+      <span data-i18n="footer.copy">© 2025 ritjeapp.nl · "Zijn we er al?" · Gemaakt met ❤️ voor ouders</span>
       <span>© OpenStreetMap contributors</span>
     </div>
   </div>
 </footer>
 
+<script src="translations.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
