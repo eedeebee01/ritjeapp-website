@@ -32,14 +32,32 @@ if (deviceBtns.length) {
   });
 }
 
-// Beta: form submit → success state
+// Beta: form submit → Formspree + success state
 const betaForm = document.getElementById('beta-form');
 const betaFormWrap = document.getElementById('beta-form-wrap');
 const betaSuccess = document.getElementById('beta-success');
 if (betaForm) {
-  betaForm.addEventListener('submit', e => {
+  betaForm.addEventListener('submit', async e => {
     e.preventDefault();
-    if (betaFormWrap) betaFormWrap.style.display = 'none';
-    if (betaSuccess) betaSuccess.style.display = 'block';
+    const submitBtn = betaForm.querySelector('.btn-submit');
+    submitBtn.textContent = 'Bezig…';
+    submitBtn.disabled = true;
+    try {
+      const res = await fetch('https://formspree.io/f/xojrlbdn', {
+        method: 'POST',
+        body: new FormData(betaForm),
+        headers: { Accept: 'application/json' }
+      });
+      if (res.ok) {
+        if (betaFormWrap) betaFormWrap.style.display = 'none';
+        if (betaSuccess) betaSuccess.style.display = 'block';
+      } else {
+        submitBtn.textContent = 'Probeer opnieuw';
+        submitBtn.disabled = false;
+      }
+    } catch {
+      submitBtn.textContent = 'Probeer opnieuw';
+      submitBtn.disabled = false;
+    }
   });
 }
