@@ -21,6 +21,13 @@ function applyLang(lang) {
     const v = t[el.dataset.i18nPh];
     if (v !== undefined) el.placeholder = v;
   });
+  // Update page title + meta description dynamically
+  const page = document.body?.dataset.page;
+  if (page && t[`page.title.${page}`]) document.title = t[`page.title.${page}`];
+  const descEl = document.querySelector('meta[name="description"]');
+  if (descEl && page && t[`page.desc.${page}`]) descEl.setAttribute('content', t[`page.desc.${page}`]);
+  const ogTitleEl = document.querySelector('meta[property="og:title"]');
+  if (ogTitleEl && page && t[`og.title.${page}`]) ogTitleEl.setAttribute('content', t[`og.title.${page}`]);
   // Update picker display
   const flag = document.getElementById('lp-flag');
   const code = document.getElementById('lp-code');
