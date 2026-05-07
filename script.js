@@ -116,5 +116,25 @@ if (betaForm) {
   });
 }
 
+// ── CONTACT: form submit ──────────────────────────────────
+const contactForm = document.getElementById('contact-form');
+const contactSuccess = document.getElementById('contact-success');
+if (contactForm) {
+  contactForm.addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = contactForm.querySelector('.btn-submit');
+    btn.textContent = '…'; btn.disabled = true;
+    try {
+      const res = await fetch('https://formspree.io/f/xpqblekw', {
+        method: 'POST', body: new FormData(contactForm), headers: { Accept: 'application/json' }
+      });
+      if (res.ok) {
+        contactForm.style.display = 'none';
+        if (contactSuccess) contactSuccess.style.display = 'block';
+      } else { btn.textContent = TRANSLATIONS[detectLang()]['contact.submit'] || 'Probeer opnieuw'; btn.disabled = false; }
+    } catch { btn.textContent = TRANSLATIONS[detectLang()]['contact.submit'] || 'Probeer opnieuw'; btn.disabled = false; }
+  });
+}
+
 // ── INIT ──────────────────────────────────────────────────
 applyLang(detectLang());

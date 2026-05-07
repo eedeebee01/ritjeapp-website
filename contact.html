@@ -43,9 +43,29 @@
   <div class="contact-card">
     <span class="contact-icon">✉️</span>
     <h1 data-i18n="contact.title">Contact</h1>
-    <p data-i18n="contact.text">Vragen over de app, de beta of iets anders? Stuur een mail.</p>
-    <a href="mailto:info@ritjeapp.nl" class="contact-email-btn">info@ritjeapp.nl</a>
-    <p class="contact-response" data-i18n="contact.response">We reageren binnen 24 uur.</p>
+    <p data-i18n="contact.text">Vragen over de app, de beta of iets anders? Stuur een bericht.</p>
+
+    <form id="contact-form" novalidate style="text-align:left;margin-top:1.5rem;">
+      <div class="form-group">
+        <label for="c-name" data-i18n="contact.l.name">Naam</label>
+        <input type="text" id="c-name" name="name" required />
+      </div>
+      <div class="form-group">
+        <label for="c-email" data-i18n="contact.l.email">E-mailadres</label>
+        <input type="email" id="c-email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="c-msg" data-i18n="contact.l.message">Bericht</label>
+        <textarea id="c-msg" name="message" rows="4" required data-i18n-ph="contact.msg.ph" placeholder="Stel je vraag hier…" style="resize:vertical;"></textarea>
+      </div>
+      <button type="submit" class="btn-submit" data-i18n="contact.submit">Verstuur bericht</button>
+    </form>
+
+    <div id="contact-success" style="display:none;text-align:center;padding:1.5rem 0;">
+      <span style="font-size:2.5rem;display:block;margin-bottom:0.75rem;">✅</span>
+      <h2 data-i18n="contact.ok.title">Verzonden!</h2>
+      <p style="color:var(--text-light);margin-top:0.5rem;" data-i18n="contact.ok.text">We reageren binnen 24 uur.</p>
+    </div>
   </div>
 </div>
 
