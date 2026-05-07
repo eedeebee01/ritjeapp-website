@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beta testen — "Zijn we er al?" | ritjeapp.nl</title>
+  <meta name="description" content='Meld je aan als betatester voor "Zijn we er al?" en test de app gratis.' />
+  <link rel="canonical" href="https://www.ritjeapp.nl/beta.html" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-main">ritjeapp<span>.nl</span></span>
+      <span class="logo-sub">Zijn we er al?</span>
+    </a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="beta.html" class="nav-cta">🧪 Beta testen</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="beta-hero">
+  <div class="container">
+    <span class="badge">🧪 Gesloten beta</span>
+    <h1>Test "Zijn we er al?" gratis</h1>
+    <p style="color:var(--text-light);font-size:1.05rem;max-width:520px;margin:0.75rem auto 0;line-height:1.7;">Wij zoeken ouders met jonge kinderen die de app willen testen. Jij test gratis, wij worden beter. Deal?</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="beta-layout">
+
+    <!-- FORM -->
+    <div>
+      <div class="beta-form-wrap" id="beta-form-wrap">
+        <form id="beta-form" novalidate>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <div class="form-group">
+              <label for="voornaam">Voornaam</label>
+              <input type="text" id="voornaam" name="voornaam" required placeholder="Jan" />
+            </div>
+            <div class="form-group">
+              <label for="achternaam">Achternaam</label>
+              <input type="text" id="achternaam" name="achternaam" required placeholder="de Vries" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mailadres</label>
+            <input type="email" id="email" name="email" required placeholder="jan@example.nl" />
+          </div>
+          <div class="form-group">
+            <label for="land">Land</label>
+            <select id="land" name="land">
+              <option value="">Kies je land…</option>
+              <option value="NL">🇳🇱 Nederland</option>
+              <option value="DE">🇩🇪 Duitsland</option>
+              <option value="GB">🇬🇧 Verenigd Koninkrijk</option>
+              <option value="FR">🇫🇷 Frankrijk</option>
+              <option value="ES">🇪🇸 Spanje</option>
+              <option value="IT">🇮🇹 Italië</option>
+              <option value="other">Anders</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="kinderen">Leeftijd kinderen</label>
+            <input type="text" id="kinderen" name="kinderen" placeholder="bijv. 2 en 5 jaar" />
+          </div>
+          <div class="form-group">
+            <label>Apparaat</label>
+            <div class="device-buttons">
+              <button type="button" class="device-btn active" data-value="ios">🍎 iPhone/iPad</button>
+              <button type="button" class="device-btn" data-value="android">🤖 Android</button>
+              <button type="button" class="device-btn" data-value="both">Beide</button>
+            </div>
+            <input type="hidden" id="device-input" name="device" value="ios" />
+          </div>
+          <button type="submit" class="btn-submit">Ja, ik wil testen!</button>
+          <p class="form-disclaimer">Geen spam. Alleen een downloadlink. Je gegevens worden niet gedeeld.</p>
+        </form>
+      </div>
+
+      <div class="beta-success" id="beta-success">
+        <span class="success-icon">🎉</span>
+        <h2>Aangemeld!</h2>
+        <p>Je ontvangt een e-mail met je gratis downloadlink voor "Zijn we er al?" zodra je geselecteerd bent. Gemiddeld 1–3 dagen.</p>
+      </div>
+    </div>
+
+    <!-- BENEFITS -->
+    <div>
+      <div class="beta-benefits">
+        <div class="benefit-item">
+          <span class="benefit-icon">🎟️</span>
+          <div>
+            <h3>Gratis downloadcode</h3>
+            <p>Normaal €1,99 — voor testers volledig gratis. Voor altijd.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <span class="benefit-icon">🚀</span>
+          <div>
+            <h3>Vroege toegang</h3>
+            <p>Je gebruikt de app voordat hij officieel uitkomt.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <span class="benefit-icon">💬</span>
+          <div>
+            <h3>Jouw feedback telt</h3>
+            <p>Verbeteringen die jij aandraagt komen in de volgende versie.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <span class="benefit-icon">⭐</span>
+          <div>
+            <h3>Geen verplichtingen</h3>
+            <p>We vragen alleen om eerlijke feedback. Geen contracten.</p>
+          </div>
+        </div>
+      </div>
+      <div class="beta-ask">
+        De app installeren en op minimaal één rit gebruiken. Daarna een paar vragen beantwoorden over je ervaring. Dat is alles.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">ritjeapp.nl</div>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="beta.html">Beta testen</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="footer-copy">
+      <span>© 2025 ritjeapp.nl · "Zijn we er al?" · Gemaakt met ❤️ voor ouders</span>
+      <span>© OpenStreetMap contributors</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
