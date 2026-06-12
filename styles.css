@@ -253,6 +253,13 @@ footer { background: #111; color: #aaa; padding: 3rem 0 2rem; }
 .store-btn .store-label { font-size: 0.67rem; opacity: 0.6; text-transform: uppercase; letter-spacing: 0.04em; }
 .store-btn .store-name { font-size: 0.95rem; font-weight: 700; }
 
+.free-badge { display: inline-block; background: #22c55e; color: #fff; font-size: 0.78rem; font-weight: 700; padding: 0.3rem 0.9rem; border-radius: 99px; margin-bottom: 1.25rem; letter-spacing: 0.03em; }
+.qr-section { display: flex; align-items: center; gap: 1.25rem; justify-content: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08); }
+.qr-wrap svg { display: block; width: 96px; height: 96px; border-radius: 8px; background: #fff; padding: 6px; box-sizing: content-box; }
+.qr-text { text-align: left; }
+.qr-title { color: var(--white); font-weight: 600; font-size: 0.95rem; margin: 0 0 0.25rem; }
+.qr-sub { color: #888; font-size: 0.8rem; margin: 0; }
+@media (max-width: 540px) { .qr-section { display: none; } }
 .download-beta { font-size: 0.875rem; color: #888; margin-bottom: 2rem; }
 .download-beta a { color: var(--white); text-decoration: underline; }
 .download-small { font-size: 0.72rem; color: #444; }

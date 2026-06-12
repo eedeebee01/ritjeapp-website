@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Downloaden — Zijn we er al?</title>
+  <style>
+    body { font-family: system-ui, sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; background: #0f172a; color: #fff; text-align: center; }
+    p { color: #888; margin: 0.5rem 0; }
+    a { color: #4ade80; }
+  </style>
+  <script>
+    (function () {
+      var ua = navigator.userAgent || navigator.vendor || window.opera;
+      if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+        window.location.replace('https://apps.apple.com/us/app/zijn-we-er-al/id6768521527');
+      } else if (/android/i.test(ua)) {
+        window.location.replace('https://play.google.com/store/apps/details?id=com.zijnweereal.app');
+      } else {
+        window.location.replace('https://www.ritjeapp.nl/#download');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <div>
+    <p>Doorsturen naar de store…</p>
+    <p><a href="https://apps.apple.com/us/app/zijn-we-er-al/id6768521527">App Store</a> &nbsp;·&nbsp; <a href="https://play.google.com/store/apps/details?id=com.zijnweereal.app">Google Play</a></p>
+  </div>
+</body>
+</html>
